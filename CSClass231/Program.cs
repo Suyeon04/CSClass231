@@ -73,6 +73,20 @@ namespace CSClass231
                     Console.WriteLine(item);
                 }
             }
+            IBasic basic = new TestClass();
+            //basic.something();
+            (basic as TestClass).someting();
+        }
+
+        class TestClass : IBasic
+        {
+            public void someting(){}
+            public int TestProperty { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public int TestInstanceMethod()
+            {
+                throw new NotImplementedException();
+            }
         }
 
         class Dummy : IDisposable

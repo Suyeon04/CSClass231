@@ -8,5 +8,7 @@ namespace CSClass231
 {
     interface IBasic
     {
+        int TestInstanceMethod();
+        int TestProperty { get; set; }
     }
 }
