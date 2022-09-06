@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,9 @@ namespace CSClass231
             Parent childAsParent = c;
             IDisposable childAsDispoable = c;
             IComparable<Child> childAsComparable = c;
+
+            File.WriteAllText(@"c:\TEMP\test.txt", "문자열 메시지를 씁니다");
+            Console.WriteLine(File.ReadAllText(@"c:\TEMP\test.txt"));
         }
 
         class TestClass : IBasic
