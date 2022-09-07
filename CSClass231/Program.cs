@@ -85,6 +85,29 @@ namespace CSClass231
 
             File.WriteAllText(@"c:\TEMP\test.txt", "문자열 메시지를 씁니다");
             Console.WriteLine(File.ReadAllText(@"c:\TEMP\test.txt"));
+
+            using (StreamWriter writer = new StreamWriter(@"c:\tEmp\test.txt"))
+            {
+                writer.WriteLine("안녕하세요");
+                writer.WriteLine("StreamWriter 클래스를 사용해");
+                writer.Write("글자를 ");
+                writer.Write("여러줄 ");
+                writer.Write("입력해봅니다.");
+                for(int i = 0; i < 100; i++)
+                {
+                    writer.WriteLine("반복문 - " + i);
+                }
+    
+            }
+            //Console.WriteLine(File.ReadAllText(@"c:\temp\test.txt"));
+            using (StreamReader reader = new StreamReader(@"c:\tEmp\test.txt"))
+            {
+                string line;                 
+                while((line = reader.ReadLine()) != null)
+                {
+                    Console.WriteLine(line);
+                }
+            }
         }
 
         class TestClass : IBasic
