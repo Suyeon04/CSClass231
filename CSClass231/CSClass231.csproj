@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Child.cs" />
+    <Compile Include="HungryException.cs" />
     <Compile Include="IBasic.cs" />
     <Compile Include="Parent.cs" />
     <Compile Include="Product.cs" />

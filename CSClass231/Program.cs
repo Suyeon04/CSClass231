@@ -113,6 +113,17 @@ namespace CSClass231
             string[] array = { "가", "나" };
             Boolean isInputLoop = true;
 
+            //throw new FormatException();
+            try { 
+                throw new HungryException("아아 배고파요~예외에요");
+            }
+            catch (HungryException exception)
+            {
+                Console.WriteLine("GetType:" + exception.GetType());
+                Console.WriteLine("Message:" + exception.Message);
+                Console.WriteLine("StackTrace:" + exception.StackTrace);
+            }
+
             while (isInputLoop)
             {
                 Console.WriteLine("숫자를 입력해주세요.[0~" + (array.Length - 1) + "]:");
