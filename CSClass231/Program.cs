@@ -123,16 +123,17 @@ namespace CSClass231
                     Console.WriteLine("입력한 위치의 값은 '" + array[index] + "'입니다.");
                     isInputLoop = false;
                 }
-               /* catch (FormatException exception)
-                {
-                    Console.WriteLine("이런, 숫자가 아닌 것을 입력하셨군요!");
-                    //Console.WriteLine(exception.GetType());
-                }
-                catch (IndexOutOfRangeException exception)
-                {
-                    Console.WriteLine("이런, 0 이상 " + array.Length + " 미만 값을 입력하세요!");
-                    //Console.WriteLine(exception.GetType());
-                }*/
+                /* catch (FormatException exception)
+                 {
+                     Console.WriteLine("이런, 숫자가 아닌 것을 입력하셨군요!");
+                     //Console.WriteLine(exception.GetType());
+                 }
+                 catch (IndexOutOfRangeException exception)
+                 {
+                     Console.WriteLine("이런, 0 이상 " + array.Length + " 미만 값을 입력하세요!");
+                     //Console.WriteLine(exception.GetType());
+                 }*/
+                // catch (var exception) - var는 예외 매개변수 부분에서 사용할 수 없다!
                 catch (Exception exception)
                 {
                     Console.WriteLine("이런, 알 수 예외가 발생했군요.");
